@@ -16,8 +16,8 @@ const { NotImplementedError } = require("../extensions/index.js");
  *
  */
 function repeater(str, options) {
-  let newString = "";
-  let additional = "";
+  let nS = "";
+  let addz = "";
 
   options.repeatTimes = options.repeatTimes || 1;
   options.separator = options.separator || "+";
@@ -28,18 +28,18 @@ function repeater(str, options) {
   options.additionSeparator = options.additionSeparator || "|";
 
   for (let i = 1; i < options.additionRepeatTimes; i++) {
-    additional += options.addition + options.additionSeparator;
+    addz += options.addition + options.additionSeparator;
   }
 
-  additional += options.addition;
+  addz += options.addition;
 
   for (let i = 1; i < options.repeatTimes; i++) {
-    newString += str + additional + options.separator;
+    nS += str + addz + options.separator;
   }
 
-  newString += str + additional;
+  nS += str + addz;
 
-  return newString;
+  return nS;
 }
 
 module.exports = {

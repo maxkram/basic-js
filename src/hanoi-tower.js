@@ -19,7 +19,7 @@ function calculateHanoi(disksNumber, turnsSpeed) {
     turns: 0,
     seconds: 0,
   };
-  calc.turns = 2 ** disksNumber - 1;
+  calc.turns = Math.pow(2, disksNumber) - 1;
 
   calc.seconds = Math.floor((calc.turns / turnsSpeed) * 3600);
 
