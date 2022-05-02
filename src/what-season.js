@@ -23,11 +23,14 @@ function getSeason(date) {
 
     if (m === 0 || m === 1 || m === 11) {
       return "winter";
-    } else if (m === 2 || m === 3 || m === 4) {
+    }
+    if (m === 2 || m === 3 || m === 4) {
       return "spring";
-    } else if (m === 5 || m === 6 || m === 7) {
+    }
+    if (m === 5 || m === 6 || m === 7) {
       return "summer";
-    } else if (m === 8 || m === 9 || m === 10) {
+    }
+    if (m === 8 || m === 9 || m === 10) {
       return "autumn";
     }
   } catch (e) {

@@ -12,22 +12,12 @@ const { NotImplementedError } = require("../extensions/index.js");
  *
  */
 function deleteDigit(num) {
-  let res = 0,
-    nd = [];
-  while (num) {
-    nd.push(num % 10);
-    num = Math.floor(num / 10);
+  let res = [];
+  let str = num.toString();
+  for (let i = 0; i < str.length; i++) {
+    res.push(str.slice(0, i) + str.slice(i + 1, str.length));
   }
-  for (let inx = 0; inx < nd.length; inx++) {
-    let n = 0;
-    for (let i = nd.length - 1; i >= 0; i--) {
-      if (i !== inx) {
-        n = n * 10 + nd[i];
-      }
-    }
-    res = Math.max(n, res);
-  }
-  return res;
+  return Math.max(...res);
 }
 
 module.exports = {

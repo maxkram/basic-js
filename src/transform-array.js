@@ -20,7 +20,7 @@ function transform(arr) {
     throw new Error("'arr' parameter must be an instance of the Array!");
   }
 
-  if (arr.length === 0) {
+  if (!arr.length) {
     return [];
   }
 

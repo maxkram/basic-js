@@ -16,7 +16,9 @@ const { NotImplementedError } = require("../extensions/index.js");
 function createDreamTeam(members) {
   let array = [];
   let stroka = "";
-
+  if (!Array.isArray(members)) {
+    return false;
+  }
   if (Array.isArray(members)) {
     for (let num of members) {
       if (typeof num === "string") {
@@ -26,8 +28,6 @@ function createDreamTeam(members) {
       }
     }
     return array.sort().join("");
-  } else {
-    return false;
   }
 }
 
